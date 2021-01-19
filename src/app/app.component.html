@@ -1,45 +1,28 @@
+
 <nz-layout class="layout">
-  <nz-sider>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed">
     <div class="logo"></div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
-      <li nz-menu-item>
-        <i nz-icon nzType="file"></i>
-        <span>{{''}}</span>
+      <li nz-menu-item  routerLink="/" nzIcon="user">
+        {{'COMMON.Home' | translate}}
       </li>
-      <li nz-menu-item>
-        <i nz-icon nzType="video-camera"></i>
-        <span>nav 2</span>
-      </li>
-      <li nz-menu-item>
-        <i nz-icon nzType="upload"></i>
-        <span>nav 3</span>
-      </li>
-      <li nz-menu-item>
-        <i nz-icon nzType="bar-chart"></i>
-        <span>nav 4</span>
-      </li>
-      <li nz-menu-item>
-        <i nz-icon nzType="cloud-o"></i>
-        <span>nav 5</span>
-      </li>
-      <li nz-menu-item>
-        <i nz-icon nzType="appstore-o"></i>
-        <span>nav 6</span>
-      </li>
-      <li nz-menu-item>
-        <i nz-icon nzType="team"></i>
-        <span>nav 7</span>
-      </li>
-      <li nz-menu-item>
-        <i nz-icon nzType="shop"></i>
-        <span>nav 8</span>
+      <li nz-submenu nzTitle="{{'COMMON.Category' | translate}}" nzIcon="team">
+        <ul>
+          <li nz-menu-item routerLink="adult">{{'CATEGORY.Adult' | translate}}</li>
+          <li nz-menu-item routerLink="hentai">{{'CATEGORY.Hentai' | translate}}</li>
+          <li nz-menu-item>{{'CATEGORY.Harem' | translate}}</li>
+        </ul>
       </li>
     </ul>
   </nz-sider>
-  <nz-layout class="right-layout">
-    <nz-header></nz-header>
+  <nz-layout>
+    <nz-header>
+      <button nz-button  class="trigger" [nzSize]="'small'" (click)="chagneLanguage()">{{currLangStr}}</button>
+    </nz-header>
     <nz-content>
-      <div class="inner-content"></div>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
     </nz-content>
   </nz-layout>
 </nz-layout>
