@@ -1,0 +1,13 @@
+{
+  "COMMON": {
+    "Home": "Trang chủ",
+    "Detail":"Chi tiết",
+    "Blog": "Blog",
+    "Category": "Thể loại"
+  },
+  "CATEGORY": {
+    "Adult": "Người lớn",
+    "Hentai": "Biến thái, trụy lạc",
+    "Harem": "Tình cảm từ nhiều phía"
+  }
+}

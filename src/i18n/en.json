@@ -1,0 +1,13 @@
+{
+  "COMMON": {
+    "Home": "Home",
+    "Detail":"Detail",
+    "Blog": "Blog",
+    "Category": "Category"
+  },
+  "CATEGORY": {
+    "Adult": "Adult",
+    "Hentai": "Hentai",
+    "Harem": "Harem"
+  }
+}
